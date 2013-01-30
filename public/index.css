@@ -1,0 +1,28 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+html{
+	background-color:#F0F0F0 ;
+	font-family: 'Lato', sans-serif;
+}
+
+
+body{
+	top:0;
+	height:100%;
+	width: 100%;
+	text-align:center;
+
+}
+
+header{
+	text-align:center;
+	height: 10%;
+	min-height: 30px;
+	background-color: #0099CC;
+}
+
+a:link{text-decoration:none;}
+a:hover{text-decoration:underline};
