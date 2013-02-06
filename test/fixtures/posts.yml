@@ -1,11 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
+  journal: 
   title: MyString
   body: MyString
   author: MyString
 
 two:
+  journal: 
   title: MyString
   body: MyString
   author: MyString

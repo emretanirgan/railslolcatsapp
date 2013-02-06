@@ -1,3 +1,4 @@
 class Post < ActiveRecord::Base
-  attr_accessible :author, :body, :title
+  belongs_to :journal
+  attr_accessible :user, :body, :title
 end
