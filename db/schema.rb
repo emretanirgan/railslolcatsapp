@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130206212349) do
+ActiveRecord::Schema.define(:version => 20130211045938) do
 
   create_table "journals", :force => true do |t|
     t.integer  "author_id"
@@ -28,6 +28,8 @@ ActiveRecord::Schema.define(:version => 20130206212349) do
     t.string   "author"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "rating"
+    t.date     "date"
   end
 
   add_index "posts", ["journal_id"], :name => "index_posts_on_journal_id"

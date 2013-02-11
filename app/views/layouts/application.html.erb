@@ -2,13 +2,34 @@
 <html>
 <head>
   <title>Railslolcatsapp</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <header class="navbar navbar-fixed-top">
+  	<nav class="navbar-inner">
+  		<div class="container">
+  			<%= render 'layouts/navigation' %>
+  		</div>
+  	</nav>
+  </header>
 
-<%= yield %>
+	<div id="main" role="main">
+		<div class="container">
+			<div class="content">
+				<div class="row">
+					<div class="span12">	
+		        <%= yield %>
+		      </div>
+		    </div>
+		    <footer>
+		    </footer>
+		  </div>
+		</div><!-- end of .container -->
+	</div><!-- end of #main -->
+
 
 </body>
 </html>
