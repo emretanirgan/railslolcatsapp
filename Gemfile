@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.11'
+gem 'rails', '3.2.12'
+gem 'json', '1.7.7'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -20,8 +21,12 @@ end
 
 gem 'jquery-rails'
 
-group :development do
+group :development, :test do  #localhost and rspec testing
   gem 'sqlite3'
+  gem 'rspec-rails'
+  gem 'rspec-expectations'
+  gem 'debugger'
+  gem 'capybara'
 end
 
 group :production do
@@ -29,6 +34,8 @@ group :production do
 end
 
 gem 'bootstrap-sass'
+
+gem 'devise'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

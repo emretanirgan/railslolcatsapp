@@ -15,7 +15,16 @@
   		</div>
   	</nav>
   </header>
-
+  <%if alert%>
+    <div class="alertalert-error">
+      <%=alert%>
+    </div>
+  <% end %>
+  <%if notice%>
+    <div class="alertalert-success">
+      <%= notice %>
+    </div>
+  <% end %>
 	<div id="main" role="main">
 		<div class="container">
 			<div class="content">
