@@ -6,7 +6,7 @@ describe 'Adding a post' do
 	it 'requires a body' do
 		sign_in
 		visit posts_path
-		click_link "New Post"
+		click_button "New Post"
 		fill_in "Title",with: "Testing"
 		click_button "Create Post"
 		error_message= "Body can't be blank"

@@ -3,6 +3,7 @@ class PostsController < ApplicationController
   # GET /posts.json
   def index
     @posts = Post.all
+    @past_week = Post.past_week
 
     respond_to do |format|
       format.html # index.html.erb

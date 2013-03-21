@@ -3,6 +3,7 @@ class JournalsController < ApplicationController
   # GET /journals.json
   def index
     @journals = Journal.all
+    @public_journals = Journal.public_journals
 
     respond_to do |format|
       format.html # index.html.erb

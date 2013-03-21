@@ -41,7 +41,7 @@ RSpec.configure do |config|
 end
 
 def sign_in
-  visit new_user session_path
+  visit new_user_session_path
   fill_in 'Email', with: 'tanirganemre@gmail.com'
   fill_in 'Password', with: 'test1234'
   click_button 'Sign in'

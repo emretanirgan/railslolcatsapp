@@ -11,12 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130220190929) do
+ActiveRecord::Schema.define(:version => 20130321015027) do
 
   create_table "journals", :force => true do |t|
     t.integer  "author_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.boolean  "public"
   end
 
   add_index "journals", ["author_id"], :name => "index_journals_on_author_id"
