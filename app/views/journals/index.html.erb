@@ -1,4 +1,4 @@
-<h1>Listing journals</h1>
+<h1 class="text-center">Listing journals</h1>
 
 <table>
   <tr>
@@ -11,7 +11,7 @@
 
 <% @public_journals.each do |journal| %>
   <tr>
-    <td><%= journal.user %></td>
+    <td><%= journal.user.name %></td>
     <td><%= journal.posts %></td>
     <td><%= link_to 'Show', journal %></td>
     <td><%= link_to 'Edit', edit_journal_path(journal) %></td>

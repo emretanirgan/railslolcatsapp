@@ -42,6 +42,8 @@ class JournalsController < ApplicationController
   # POST /journals.json
   def create
     @journal = Journal.new(params[:journal])
+    postarray = Array.new
+    @journal.posts = postarray
 
     respond_to do |format|
       if @journal.save

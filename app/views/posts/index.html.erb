@@ -1,13 +1,13 @@
-<h1>My Everyday Awesome Moments</h1>
+<h1 class="text-center">My Everyday Awesome Moments</h1>
 <hr/>
-<h3>Posts This Week</h3>
+<h3 class="text-center">Posts This Week</h3>
 <table class="table">
   <tr>
     <!--<th>Journal</th>-->
     <th>Date</th>
     <th>Title</th>
     <th>Body</th>
-    <!--<th>Author</th>-->
+    <th>Author</th>
     <th>Awesomeness</th>
     <th></th>
     <th></th>
@@ -19,7 +19,7 @@
     <td><%= post.date %></td>
     <td><%= post.title %></td>
     <td><%= post.body %></td>
-    <!--<td><%= post.author %></td>-->
+    <td><%= post.author %></td>
     <td><%= post.rating %></td>
     <td><%= link_to 'Show', post %></td>
     <td><%= link_to 'Edit', edit_post_path(post) %></td>
@@ -27,14 +27,14 @@
   </tr>
 <% end %>
 </table>
-<h3> All Posts </h3>
+<h3 class="text-center"> All Posts </h3>
 <table class="table">
   <tr>
     <!--<th>Journal</th>-->
     <th>Date</th>
     <th>Title</th>
     <th>Body</th>
-    <!--<th>Author</th>-->
+    <th>Author</th>
     <th>Awesomeness</th>
     <th></th>
     <th></th>
@@ -46,7 +46,7 @@
     <td><%= post.date %></td>
     <td><%= post.title %></td>
     <td><%= post.body %></td>
-    <!--<td><%= post.author %></td>-->
+    <td><%= post.author %></td>
     <td><%= post.rating %></td>
     <td><%= link_to 'Show', post %></td>
     <td><%= link_to 'Edit', edit_post_path(post) %></td>
@@ -57,4 +57,4 @@
 
 <br />
 
-<%= link_to 'New Post', new_post_path , :class => "btn" %>
+<%= link_to 'New Post', new_post_path , :class => "btn btn-primary" %>

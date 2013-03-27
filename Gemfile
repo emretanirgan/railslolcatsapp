@@ -27,6 +27,7 @@ group :development, :test do  #localhost and rspec testing
   gem 'rspec-expectations'
   gem 'debugger'
   gem 'capybara'
+  gem 'letter_opener'
 end
 
 group :production do
@@ -34,7 +35,7 @@ group :production do
 end
 
 gem 'bootstrap-sass'
-
+gem 'rails_admin'
 gem 'devise'
 
 # To use ActiveModel has_secure_password

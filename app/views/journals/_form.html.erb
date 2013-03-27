@@ -12,7 +12,7 @@
   <% end %>
   <div class="field">
     <%= f.label :user %><br />
-    <%= f.collection_select :user, User.all, :id, :email %>
+    <%= f.collection_select :user, User.all, :id, :name %>
   </div>
   <div class="field">
     <%= f.label :posts %><br />
