@@ -1,6 +1,25 @@
+<div id="tooltip"><h5>Getting started is easy! Just click "New Post" to begin!</h5></div>
+
+<button id="hide">Hide Tooltip</button>
+<button id="show">Show Tooltip</button>
+<hr>
 <h1 class="text-center">My Everyday Awesome Moments</h1>
 <hr/>
 <h3 class="text-center">Posts This Week</h3>
+
+<script type="text/javascript">
+$(function () {
+    var $tooltip = $("#tooltip");
+    var $hide = $("#hide");
+    $hide.click(function () {
+        $tooltip.hide(1000);
+    });
+    $("#show").click(function() {
+        $tooltip.show(1000);
+
+    });
+});
+</script>
 <table class="table">
   <tr>
     <!--<th>Journal</th>-->
