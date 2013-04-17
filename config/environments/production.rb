@@ -26,7 +26,7 @@ Railslolcatsapp::Application.configure do
     :authentication=>:plain,
     :user_name =>ENV['emretanirgan'],
     :password =>ENV['ermetan123'],
-    :domain => 'heroku.com'
+    :domain => 'railslolcatsapp.herokuapp.com'
   }
   config.action_mailer.default_url_options
   {:host=> "railslolcatsapp.herokapp.com"}
