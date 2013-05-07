@@ -1,13 +1,15 @@
 Railslolcatsapp::Application.routes.draw do
-  get "static_pages/home"
 
-  get "static_pages/contact"
 
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
   devise_for :users
 
-  resources :posts
+  resources :posts do
+    collection do
+      get 'all'
+    end
+  end
 
 
   resources :journals
@@ -15,6 +17,10 @@ Railslolcatsapp::Application.routes.draw do
 
   resources :users
 
+
+  match 'contact' => 'static_pages#contact'
+  match 'about' => 'static_pages#about'
+  match 'home' => 'static_pages#home'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -65,7 +71,11 @@ Railslolcatsapp::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'static_pages#home'
+  authenticated :user do
+    root :to => 'posts#index'
+  end
+  
+  root :to => redirect('/home')
 
   # See how all your routes lay out with "rake routes"
 

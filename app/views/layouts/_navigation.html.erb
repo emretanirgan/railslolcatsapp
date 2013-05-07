@@ -1,14 +1,17 @@
 
 <ul class="nav">
-	<li >
-		<%= link_to "My Journal of Awesomeness", root_path, :class => 'brand' %>
-	</li>
+
+
+	<li><%= link_to "Home", ('../home') %></li>
 	<li class="divider-vertical">
 		<%= link_to('My Posts', posts_path) %>
 	</li>
 	<li>
-		<%= link_to('Other Journals', journals_path) %>
+		<%= link_to('Other Journals', '/posts/all') %>
 	</li>
+	
+	<li><a href="../about">About</a></li>
+  <li><a href="../contact">Contact</a></li>
 	<% if user_signed_in? %>
 		<li><%= link_to 'Logout',
 			destroy_user_session_path,

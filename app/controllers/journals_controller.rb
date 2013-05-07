@@ -1,4 +1,5 @@
 class JournalsController < ApplicationController
+  before_filter :authenticate_user!
   # GET /journals
   # GET /journals.json
   def index
@@ -27,6 +28,7 @@ class JournalsController < ApplicationController
   def new
     @journal = Journal.new
 
+
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @journal }
@@ -44,6 +46,7 @@ class JournalsController < ApplicationController
     @journal = Journal.new(params[:journal])
     postarray = Array.new
     @journal.posts = postarray
+    @journal.user = current_user
 
     respond_to do |format|
       if @journal.save
