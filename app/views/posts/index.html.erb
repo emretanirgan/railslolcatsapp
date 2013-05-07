@@ -33,7 +33,9 @@ $(function () {
   </tr>
 
 <% @past_week.each do |post| %>
+  <% if post.author == current_user.name %>
   <tr>
+
     <!--<td><%= post.journal %></td>-->
     <td><%= post.date %></td>
     <td><%= post.title %></td>
@@ -44,6 +46,7 @@ $(function () {
     <td><%= link_to 'Edit', edit_post_path(post) %></td>
     <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
+  <% end %>
 <% end %>
 </table>
 <h3 class="text-center"> All Posts </h3>
